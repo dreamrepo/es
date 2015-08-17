@@ -39,7 +39,38 @@
     </properties>
 
     <repositories>
-
+		
+		<repository>
+			<id>taerepository</id>
+			<url>http://mvnrepo.tae.taobao.com/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>taesnapshots</id>
+			<url>http://mvnrepo.tae.taobao.com/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>taereleases</id>
+			<url>http://mvnrepo.tae.taobao.com/content/repositories/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		
         <repository>
             <id>oschina Releases</id>
             <name>oschina Releases</name>
@@ -112,12 +143,12 @@
             <id>Codehaus repository</id>
             <url>http://repository.codehaus.org/</url>
         </pluginRepository>
-        <pluginRepository>
+        <!-- <pluginRepository>
             <id>maven-db-plugin-repo</id>
             <name>maven db plugin repository</name>
             <url>https://maven-db-plugin.googlecode.com/svn/maven/repo</url>
             <layout>default</layout>
-        </pluginRepository>
+        </pluginRepository> -->
 
     </pluginRepositories>
 
