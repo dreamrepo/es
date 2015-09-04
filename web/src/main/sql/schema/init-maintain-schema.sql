@@ -6,6 +6,7 @@ drop table if exists `maintain_map`;;
 drop table if exists `maintain_notification_template`;;
 drop table if exists `maintain_notification_data`;;
 drop table if exists `maintain_task_definition`;;
+drop table if exists `maintain_dynamic_task`;;
 
 create table `maintain_icon`(
   `id`         bigint not null auto_increment,
@@ -72,5 +73,17 @@ create table `maintain_task_definition`(
   `description`     varchar(2000),
 
   constraint `pk_maintain_task_definition` primary key(`id`)
+) charset=utf8 ENGINE=InnoDB;;
+
+create table `maintain_dynamic_task`(
+  `id`               bigint not null auto_increment,
+  `name`           varchar(100),
+  `cron`            varchar(200),
+  `bean_name`       varchar(200),
+  `method_name`     varchar(200),
+  `groovy_script`      varchar(2000),
+  `is_start`        bool,
+
+  constraint `pk_maintain_dynamic_task` primary key(`id`)
 ) charset=utf8 ENGINE=InnoDB;;
 
